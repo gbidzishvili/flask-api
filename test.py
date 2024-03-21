@@ -2,8 +2,16 @@ import requests
 
 BASE = "http://127.0.0.1:5000/"
 
-
-response = requests.patch(BASE + "video/1",{"views":1234,"likes":34})
+response = requests.put(BASE + "video/2",{"likes":78,"name":"name_1","views":45646226})
+print(response.json())
+input()
+response = requests.patch(BASE + "video/2",{"likes":34534534,"name":"giushki","views":45646226})
+print(response.json())
+input()
+# response = requests.delete(BASE + "video/2");
+# print(response)
+# input()
+response = requests.get(BASE + "video/2")
 print(response.json())
 
 
